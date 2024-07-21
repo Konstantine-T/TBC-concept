@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: "Noto Sans Georgian", sans-serif !important;
 }
 
 body {
@@ -59,9 +60,6 @@ body {
     color: #141719;
     margin-left: 0;
     margin-right: 0;
-    /* position: relative;
-    text-align: left;
-    display: inline-block; */
 }
 
 .nav-btn {
@@ -69,7 +67,6 @@ body {
     align-items: center;
     padding: 0;
     display: flex;
-    font-family: TBCX, sans-serif !important;
 }
 
 .nav-btn:hover,
