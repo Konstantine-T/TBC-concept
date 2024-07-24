@@ -92,3 +92,149 @@
     background-color: #3295ce;
     cursor: pointer;
 }
+
+.section-subscribe-message,
+.section-choose-package {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 47px;
+    padding-right: 47px;
+    position: relative;
+}
+
+.subscribe-message-wrapper {
+    width: 100%;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subscribe-message-text {
+    color: #141719;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.packages-wrapper {
+    width: 100%;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.package-inner-content {
+    z-index: 2;
+    height: 100%;
+    grid-row-gap: 20px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 40px;
+    display: flex;
+    position: relative;
+}
+
+.package-inner-content-text {
+    color: #ffffff;
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.packages-heading {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 36px;
+    display: flex;
+}
+
+.packages-heading-text {
+    color: #141719;
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.packages {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    align-items: stretch;
+}
+
+.package {
+    min-height: 256px;
+    grid-row-gap: 20px;
+    color: #fff;
+    background-color: #141719;
+    border-radius: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.package:hover {
+    cursor: pointer;
+}
+
+.package:hover .package-image {
+    transform: scale(1.05);
+}
+
+.package-inner-content {
+    z-index: 2;
+    height: 100%;
+    grid-row-gap: 20px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 40px;
+    display: flex;
+    position: relative;
+}
+
+.package-redirect {
+    grid-column-gap: 6px;
+    color: #ffffff;
+    flex: none;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    transition: color .25s ease-in-out;
+    display: flex;
+}
+
+.package-redirect:hover {
+    color: gray;
+    text-decoration: none;
+}
+
+.package-image {
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    object-fit: cover;
+    transition: transform 0.25s ease-in-out;
+}
+
+.package-image:hover {
+    transform: scale(1.3);
+}
+
+.package-360 {
+    grid-area: span 2/span 1/span 2/span 1;
+}
