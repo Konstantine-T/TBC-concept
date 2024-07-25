@@ -93,6 +93,10 @@
     display: flex;
 }
 
+.arrow-box-redirect:hover {
+    color: #3295ce;
+}
+
 .arrow-btn {
     z-index: 2;
     justify-content: center;
