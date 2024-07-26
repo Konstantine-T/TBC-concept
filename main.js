@@ -1,33 +1,39 @@
-  const slider = document.querySelector('.slider');
-  const sliderThumb = document.querySelector('.slider-scrollbar-thumb');
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+  const sliders = document.querySelectorAll('.slider');
+  const sliderThumbs = document.querySelectorAll('.slider-scrollbar-thumb');
 
-  slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-  });
-  slider.addEventListener('mouseleave', () => {
-    isDown = false;
-  });
-  slider.addEventListener('mouseup', () => {
-    isDown = false;
-  });
-  slider.addEventListener('mousemove', (e) => {
-    if(!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX);
-    slider.scrollLeft = scrollLeft - walk;
-    updateThumbPosition();
-  });
+  console.log(sliders)
 
-  function updateThumbPosition() {
-    const scrollRatio = slider.scrollLeft / (slider.scrollWidth - slider.clientWidth);
-    const thumbMaxTranslate = slider.clientWidth - sliderThumb.offsetWidth;
-    sliderThumb.style.transform = `translateX(${scrollRatio * thumbMaxTranslate}px)`;
+  for(let i = 0; i < sliders.length; i++) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    sliders[i].addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - sliders[i].offsetLeft;
+        scrollLeft = sliders[i].scrollLeft;
+      });
+      sliders[i].addEventListener('mouseleave', () => {
+        isDown = false;
+      });
+      sliders[i].addEventListener('mouseup', () => {
+        isDown = false;
+      });
+      sliders[i].addEventListener('mousemove', (e) => {
+        if(!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - sliders[i].offsetLeft;
+        const walk = (x - startX);
+        sliders[i].scrollLeft = scrollLeft - walk;
+        updateThumbPosition();
+      });
+    
+      function updateThumbPosition() {
+        const scrollRatio = sliders[i].scrollLeft / (sliders[i].scrollWidth - sliders[i].clientWidth);
+        const thumbMaxTranslate = sliders[i].clientWidth - sliderThumbs[i].offsetWidth;
+        sliderThumbs[i].style.transform = `translateX(${scrollRatio * thumbMaxTranslate}px)`;
+      }
+    
+      updateThumbPosition();
   }
 
-  updateThumbPosition();
