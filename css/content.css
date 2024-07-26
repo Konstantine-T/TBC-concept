@@ -151,7 +151,8 @@
 }
 
 .packages-heading-text,
-.offers-heading {
+.offers-heading,
+.digital-bank-main-text {
     color: #141719;
     margin-top: 0;
     font-size: 24px;
@@ -333,6 +334,8 @@
     box-sizing: content-box;
     flex-direction: row;
     padding-bottom: 38px;
+    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 .offer-card {
@@ -341,6 +344,7 @@
     flex-shrink: 0;
     height: auto;
     position: relative;
+    user-select: none;
 }
 
 .card-content-wrapper {
@@ -392,6 +396,7 @@
     left: 0;
     right: 0;
     transition: transform 0.25s ease-in-out;
+    -webkit-user-drag: none;
 }
 
 .card-main-image:hover {
@@ -447,4 +452,75 @@
     transition-duration: 0ms;
     background: #182cc0;
     border-radius: 1px;
+}
+
+.section-digital-bank {
+    background-color: #fff;
+    padding-left: 47px;
+    padding-right: 47px;
+    position: relative;
+}
+
+.digital-bank-wrapper {
+    width: 100%;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 374px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.digital-bank-inner-content {
+    width: 55%;
+    grid-row-gap: 16px;
+    flex-direction: column;
+    flex: none;
+    align-items: flex-start;
+    display: flex;
+}
+
+.get-app-buttons-wrapper {
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    display: flex;
+}
+
+.get-app-btn {
+    color: #fff;
+    text-transform: uppercase;
+    border: 1px solid #e1e4e5;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.33;
+    display: flex;
+}
+
+.get-app-btn:hover {
+    background-color: #f7f7f7;
+}
+
+.smartphone-img {
+    max-height: 90%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: 100% 100%;
+    object-position: 100% 100%;
+    align-self: flex-end;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 0;
 }
