@@ -83,7 +83,7 @@ strong {
     font-size: 12px;
     font-weight: 700;
     line-height: 1.33;
-    text-decoration: none;
+    text-decoration: none !important;
     transition: all .25s ease-in-out;
     display: flex;
     position: relative;
@@ -92,8 +92,13 @@ strong {
 }
 
 .subscribe-button:hover {
-    background-color: #3295ce;
+    background-image: linear-gradient(#3295ce,#3295ce);
     cursor: pointer;
+}
+
+.subscribe-button-redirect {
+    width: fit-content;
+    text-decoration: none;
 }
 
 .section-subscribe-message,
