@@ -2,6 +2,25 @@ strong {
     font-weight: 700;
 }
 
+section {
+    padding-left: 47px;
+    padding-right: 47px;
+}
+
+@media screen and (max-width: 994px) {
+    section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+
+    .statistics-wrapper {
+        grid-row-gap: 30px;
+        flex-direction: column;
+    }
+}
+
 .content-wrapper {
     height: calc(100vh - 80px);
     overflow-y: auto;
@@ -11,6 +30,7 @@ strong {
 
 .path-wrapper {
     margin: 24px 24px;
+    padding-left: 47px;
     width: 100%;
     max-width: 1110px;
     margin-left: auto;
@@ -32,8 +52,6 @@ strong {
 .section-main {
     padding-top: 32px;
     padding-bottom: 60px;
-    padding-left: 47px;
-    padding-right: 47px;
     position: relative;
 }
 
@@ -109,8 +127,6 @@ strong {
 .section-rewards {
     padding-top: 60px;
     padding-bottom: 60px;
-    padding-left: 47px;
-    padding-right: 47px;
     position: relative;
 }
 
@@ -292,6 +308,12 @@ strong {
     margin-bottom: 0;
 }
 
+@media screen and (max-width: 994px) {
+    .header-navigation {
+        display: none;
+    }
+}
+
 .offers-wrapper {
     width: 100%;
     max-width: 1110px;
@@ -467,8 +489,6 @@ strong {
 
 .section-digital-bank {
     background-color: #fff;
-    padding-left: 47px;
-    padding-right: 47px;
     position: relative;
 }
 
@@ -535,6 +555,54 @@ strong {
     left: auto;
     right: 0;
 }
+
+.smartphone-img-small {
+    display: none;
+}
+
+@media screen and (max-width: 766px) {
+    .digital-bank-wrapper {
+        min-height: 0;
+        flex-direction: column;
+        padding-top: 45px;
+        padding-bottom: 45px;
+        min-height: 374px;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        display: flex;
+        position: relative;
+    }
+
+    .digital-bank-inner-content {
+        width: 100%;
+        grid-row-gap: 28px;
+        width: 55%;
+        grid-row-gap: 16px;
+        flex-direction: column;
+        flex: none;
+        display: flex;
+        margin: auto;
+    }
+
+    .smartphone-img {
+        display: none;
+    }
+
+    .smartphone-img-small {
+        max-width: 100%;
+        object-fit: contain;
+        align-self: flex-end;
+        padding: auto;
+        top: auto;
+        bottom: 0;
+        left: auto;
+        right: 0;
+        display: block;
+    }
+}
+
 
 .product-card {
     width: 421.843px;

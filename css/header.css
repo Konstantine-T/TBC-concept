@@ -133,3 +133,19 @@
     align-items: center;
     display: flex;
 }
+
+@media screen and (max-width: 994px) {
+    .header-navigation {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 766px) {
+    .hide-element {
+        display: none;
+    }
+    
+    .tbc-logo {
+        width: 100%;
+    }
+}
