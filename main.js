@@ -8,6 +8,7 @@
     let startX;
     let scrollLeft;
 
+    //Mouse events
     sliders[i].addEventListener('mousedown', (e) => {
         isDown = true;
         startX = e.pageX - sliders[i].offsetLeft;
@@ -23,6 +24,26 @@
         if(!isDown) return;
         e.preventDefault();
         const x = e.pageX - sliders[i].offsetLeft;
+        const walk = (x - startX);
+        sliders[i].scrollLeft = scrollLeft - walk;
+        updateThumbPosition();
+      });
+
+      //Touch events
+      sliders[i].addEventListener('touchstart', (e) => {
+        isDown = true;
+        startX = e.touches[0].pageX - sliders[i].offsetLeft;
+        scrollLeft = sliders[i].scrollLeft;
+      });
+    
+      sliders[i].addEventListener('touchend', () => {
+        isDown = false;
+      });
+    
+      sliders[i].addEventListener('touchmove', (e) => {
+        if(!isDown) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - sliders[i].offsetLeft;
         const walk = (x - startX);
         sliders[i].scrollLeft = scrollLeft - walk;
         updateThumbPosition();
